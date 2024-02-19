@@ -1,0 +1,289 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 95.24    199.30   199.30      333   598.51   599.44  LSE::density_constraint(std::vector<double, std::allocator<double> > const&, double)
+  1.29    202.00     2.70                             wrapper::Placement::outputBookshelfFormat(char const*)
+  0.99    204.07     2.07                             wrapper::Module::setCenterPosition(double, double)
+  0.46    205.03     0.96                             wrapper::Placement::readBookshelfFormat(char const*, char const*)
+  0.41    205.89     0.86                             wrapper::Module::setPosition(double, double)
+  0.29    206.49     0.60                             wrapper::Module::area()
+  0.25    207.03     0.53                             wrapper::Placement::Placement()
+  0.25    207.56     0.53      528     1.00     1.00  LSE::WL_cal(std::vector<double, std::allocator<double> > const&, double, double&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+  0.19    207.96     0.40                             wrapper::Module::orientString()
+  0.16    208.29     0.33      528     0.63     0.70  LSE::WL(std::vector<double, std::allocator<double> > const&, double, std::vector<double, std::allocator<double> >&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+  0.10    208.49     0.20      528     0.38     0.38  LSE::lseloss(std::vector<double, std::allocator<double> > const&, double, double)
+  0.09    208.68     0.19 147431872     0.00     0.00  LSE::condtionB_cal(double&, double&, double&, double&, double, double)
+  0.08    208.84     0.16                             wrapper::Module::centerY()
+  0.06    208.96     0.12 139987312     0.00     0.00  LSE::condtionA_cal(double&, double, double)
+  0.03    209.03     0.07                             LSE::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&)
+  0.03    209.09     0.06                             NumericalOptimizer::solve()
+  0.02    209.13     0.04      528     0.08     0.08  LSE::create_exp_vector(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, double)
+  0.01    209.16     0.03                             std::_Rb_tree<std::string, std::pair<std::string const, unsigned int>, std::_Select1st<std::pair<std::string const, unsigned int> >, std::less<std::string>, std::allocator<std::pair<std::string const, unsigned int> > >::insert_unique(std::pair<std::string const, unsigned int> const&)
+  0.01    209.18     0.02      529     0.04     0.42  std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&)
+  0.01    209.20     0.02                             NumericalOptimizer::NumericalOptimizer(NumericalOptimizerInterface&)
+  0.01    209.22     0.02                             LSE::condtionC_cal()
+  0.01    209.24     0.02                             LSE::evaluateF(std::vector<double, std::allocator<double> > const&, double&)
+  0.01    209.26     0.02                             wrapper::Module::isFixed()
+  0.01    209.28     0.02                             wrapper::Placement::~Placement()
+  0.00    209.29     0.01                             Placement::computeHpwl()
+  0.00    209.29     0.00      772     0.00     0.00  ExampleFunction::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&)
+  0.00    209.29     0.00        2     0.00     0.00  LSE::LSE(wrapper::Placement&, double&, std::vector<double, std::allocator<double> >&, double, double, int, int)
+  0.00    209.29     0.00        1     0.00     0.00  GlobalPlacer::initPlace(std::vector<double, std::allocator<double> >&)
+  0.00    209.29     0.00        1     0.00     0.00  std::_Hashtable<std::string, std::pair<std::string const, Timer::TimerComponent>, std::allocator<std::pair<std::string const, Timer::TimerComponent> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::count(std::string const&) const
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.00% of 209.29 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     95.8    0.07  200.51                 LSE::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&) [1]
+              199.30    0.31     333/333         LSE::density_constraint(std::vector<double, std::allocator<double> > const&, double) [2]
+                0.53    0.00     528/528         LSE::WL_cal(std::vector<double, std::allocator<double> > const&, double, double&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&) [9]
+                0.33    0.04     528/528         LSE::WL(std::vector<double, std::allocator<double> > const&, double, std::vector<double, std::allocator<double> >&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&) [11]
+-----------------------------------------------
+              199.30    0.31     333/333         LSE::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&) [1]
+[2]     95.4  199.30    0.31     333         LSE::density_constraint(std::vector<double, std::allocator<double> > const&, double) [2]
+                0.19    0.00 147431872/147431872     LSE::condtionB_cal(double&, double&, double&, double&, double, double) [15]
+                0.12    0.00 139987312/139987312     LSE::condtionA_cal(double&, double, double) [17]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]      1.3    2.70    0.00                 wrapper::Placement::outputBookshelfFormat(char const*) [3]
+-----------------------------------------------
+                                                 <spontaneous>
+[4]      1.0    2.07    0.00                 wrapper::Module::setCenterPosition(double, double) [4]
+-----------------------------------------------
+                                                 <spontaneous>
+[5]      0.5    0.96    0.00                 wrapper::Placement::readBookshelfFormat(char const*, char const*) [5]
+-----------------------------------------------
+                                                 <spontaneous>
+[6]      0.4    0.86    0.00                 wrapper::Module::setPosition(double, double) [6]
+-----------------------------------------------
+                                                 <spontaneous>
+[7]      0.3    0.60    0.00                 wrapper::Module::area() [7]
+-----------------------------------------------
+                                                 <spontaneous>
+[8]      0.3    0.53    0.00                 wrapper::Placement::Placement() [8]
+-----------------------------------------------
+                0.53    0.00     528/528         LSE::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&) [1]
+[9]      0.3    0.53    0.00     528         LSE::WL_cal(std::vector<double, std::allocator<double> > const&, double, double&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&) [9]
+-----------------------------------------------
+                                                 <spontaneous>
+[10]     0.2    0.40    0.00                 wrapper::Module::orientString() [10]
+-----------------------------------------------
+                0.33    0.04     528/528         LSE::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&) [1]
+[11]     0.2    0.33    0.04     528         LSE::WL(std::vector<double, std::allocator<double> > const&, double, std::vector<double, std::allocator<double> >&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&) [11]
+                0.04    0.00     528/528         LSE::create_exp_vector(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, double) [19]
+-----------------------------------------------
+                                                 <spontaneous>
+[12]     0.1    0.06    0.16                 NumericalOptimizer::solve() [12]
+                0.01    0.15     388/529         std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [13]
+                0.00    0.00     149/772         ExampleFunction::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&) [33]
+-----------------------------------------------
+                0.00    0.00       1/529         _fini [27]
+                0.01    0.05     140/529         NumericalOptimizer::NumericalOptimizer(NumericalOptimizerInterface&) [18]
+                0.01    0.15     388/529         NumericalOptimizer::solve() [12]
+[13]     0.1    0.02    0.20     529         std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [13]
+                0.20    0.00     528/528         LSE::lseloss(std::vector<double, std::allocator<double> > const&, double, double) [14]
+                0.00    0.00     140/772         ExampleFunction::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&) [33]
+-----------------------------------------------
+                0.20    0.00     528/528         std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [13]
+[14]     0.1    0.20    0.00     528         LSE::lseloss(std::vector<double, std::allocator<double> > const&, double, double) [14]
+-----------------------------------------------
+                0.19    0.00 147431872/147431872     LSE::density_constraint(std::vector<double, std::allocator<double> > const&, double) [2]
+[15]     0.1    0.19    0.00 147431872         LSE::condtionB_cal(double&, double&, double&, double&, double, double) [15]
+-----------------------------------------------
+                                                 <spontaneous>
+[16]     0.1    0.16    0.00                 wrapper::Module::centerY() [16]
+-----------------------------------------------
+                0.12    0.00 139987312/139987312     LSE::density_constraint(std::vector<double, std::allocator<double> > const&, double) [2]
+[17]     0.1    0.12    0.00 139987312         LSE::condtionA_cal(double&, double, double) [17]
+-----------------------------------------------
+                                                 <spontaneous>
+[18]     0.0    0.00    0.06                 NumericalOptimizer::NumericalOptimizer(NumericalOptimizerInterface&) [18]
+                0.01    0.05     140/529         std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [13]
+                0.00    0.00     284/772         ExampleFunction::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&) [33]
+-----------------------------------------------
+                0.04    0.00     528/528         LSE::WL(std::vector<double, std::allocator<double> > const&, double, std::vector<double, std::allocator<double> >&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&) [11]
+[19]     0.0    0.04    0.00     528         LSE::create_exp_vector(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, double) [19]
+-----------------------------------------------
+                                                 <spontaneous>
+[20]     0.0    0.03    0.00                 std::_Rb_tree<std::string, std::pair<std::string const, unsigned int>, std::_Select1st<std::pair<std::string const, unsigned int> >, std::less<std::string>, std::allocator<std::pair<std::string const, unsigned int> > >::insert_unique(std::pair<std::string const, unsigned int> const&) [20]
+-----------------------------------------------
+                                                 <spontaneous>
+[21]     0.0    0.02    0.00                 NumericalOptimizer::NumericalOptimizer(NumericalOptimizerInterface&) [21]
+-----------------------------------------------
+                                                 <spontaneous>
+[22]     0.0    0.02    0.00                 LSE::condtionC_cal() [22]
+-----------------------------------------------
+                                                 <spontaneous>
+[23]     0.0    0.02    0.00                 LSE::evaluateF(std::vector<double, std::allocator<double> > const&, double&) [23]
+-----------------------------------------------
+                                                 <spontaneous>
+[24]     0.0    0.02    0.00                 wrapper::Module::isFixed() [24]
+-----------------------------------------------
+                                                 <spontaneous>
+[25]     0.0    0.02    0.00                 wrapper::Placement::~Placement() [25]
+-----------------------------------------------
+                                                 <spontaneous>
+[26]     0.0    0.01    0.00                 Placement::computeHpwl() [26]
+-----------------------------------------------
+                                                 <spontaneous>
+[27]     0.0    0.00    0.00                 _fini [27]
+                0.00    0.00       1/529         std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [13]
+                0.00    0.00       1/1           std::_Hashtable<std::string, std::pair<std::string const, Timer::TimerComponent>, std::allocator<std::pair<std::string const, Timer::TimerComponent> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::count(std::string const&) const [36]
+-----------------------------------------------
+                0.00    0.00       4/772         GlobalPlacer::place() [58]
+                0.00    0.00     140/772         std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) [13]
+                0.00    0.00     149/772         NumericalOptimizer::solve() [12]
+                0.00    0.00     195/772         std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::~vector() [146]
+                0.00    0.00     284/772         NumericalOptimizer::NumericalOptimizer(NumericalOptimizerInterface&) [18]
+[33]     0.0    0.00    0.00     772         ExampleFunction::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&) [33]
+-----------------------------------------------
+                0.00    0.00       1/2           GlobalPlacer::place() [58]
+                0.00    0.00       1/2           std::vector<double, std::allocator<double> >::_M_fill_insert(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, unsigned long, double const&) [148]
+[34]     0.0    0.00    0.00       2         LSE::LSE(wrapper::Placement&, double&, std::vector<double, std::allocator<double> >&, double, double, int, int) [34]
+-----------------------------------------------
+                0.00    0.00       1/1           GlobalPlacer::place() [58]
+[35]     0.0    0.00    0.00       1         GlobalPlacer::initPlace(std::vector<double, std::allocator<double> >&) [35]
+-----------------------------------------------
+                0.00    0.00       1/1           _fini [27]
+[36]     0.0    0.00    0.00       1         std::_Hashtable<std::string, std::pair<std::string const, Timer::TimerComponent>, std::allocator<std::pair<std::string const, Timer::TimerComponent> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::count(std::string const&) const [36]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [35] GlobalPlacer::initPlace(std::vector<double, std::allocator<double> >&) [11] LSE::WL(std::vector<double, std::allocator<double> > const&, double, std::vector<double, std::allocator<double> >&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&) [24] wrapper::Module::isFixed()
+  [33] ExampleFunction::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&) [9] LSE::WL_cal(std::vector<double, std::allocator<double> > const&, double, double&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&) [5] wrapper::Placement::readBookshelfFormat(char const*, char const*)
+  [12] NumericalOptimizer::solve() [14] LSE::lseloss(std::vector<double, std::allocator<double> > const&, double, double) [3] wrapper::Placement::outputBookshelfFormat(char const*)
+  [21] NumericalOptimizer::NumericalOptimizer(NumericalOptimizerInterface&) [23] LSE::evaluateF(std::vector<double, std::allocator<double> > const&, double&) [8] wrapper::Placement::Placement()
+   [1] LSE::evaluateFG(std::vector<double, std::allocator<double> > const&, double&, std::vector<double, std::allocator<double> >&) [34] LSE::LSE(wrapper::Placement&, double&, std::vector<double, std::allocator<double> >&, double, double, int, int) [25] wrapper::Placement::~Placement()
+  [17] LSE::condtionA_cal(double&, double, double) [6] wrapper::Module::setPosition(double, double) [26] Placement::computeHpwl()
+  [15] LSE::condtionB_cal(double&, double&, double&, double&, double, double) [10] wrapper::Module::orientString() [36] std::_Hashtable<std::string, std::pair<std::string const, Timer::TimerComponent>, std::allocator<std::pair<std::string const, Timer::TimerComponent> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::count(std::string const&) const
+  [22] LSE::condtionC_cal()    [4] wrapper::Module::setCenterPosition(double, double) [13] std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&)
+  [19] LSE::create_exp_vector(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, double) [7] wrapper::Module::area() [20] std::_Rb_tree<std::string, std::pair<std::string const, unsigned int>, std::_Select1st<std::pair<std::string const, unsigned int> >, std::less<std::string>, std::allocator<std::pair<std::string const, unsigned int> > >::insert_unique(std::pair<std::string const, unsigned int> const&)
+   [2] LSE::density_constraint(std::vector<double, std::allocator<double> > const&, double) [16] wrapper::Module::centerY()
